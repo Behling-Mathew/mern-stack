@@ -12,15 +12,17 @@ global.logged_in = false;
 
 require('dotenv').config();
 
-// Serve static assets if in production
-if(process.env.NODE_ENV === 'production') {
+
     // Set static folder
-    app.use(express.static('../mern-fitness/build'))
+    app.use(express.static(path.join(__dirname, "../mern-fitness/build")));
+
+    // React root
 
     app.get('*', (req, res) => {
-       res.sendFile(path.resolve(__dirname, 'mern-fitness', 'build', 'index.html')); 
-    })
-}
+       res.sendFile(path.join(__dirname + "../mern-fitness/build/index.html"));
+        
+    });
+
 
 const port = process.env.PORT || 5000;
 
