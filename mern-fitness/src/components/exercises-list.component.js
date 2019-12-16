@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 
-{document.body.style.backgroundImage = "url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80')";}
+{document.body.style.backgroundImage = "url('https://raw.githubusercontent.com/Behling-Mathew/mern-stack/master/mern-fitness/public/assets/gym.jpg')";}
 {document.body.style.backgroundRepeat = "no-repeat";}
 {document.body.style.backgroundSize = "cover";}
 // This is a funtional component w/o state

@@ -5,10 +5,23 @@ var session = require('express-session');
 var cookieParser = require('cookie-parser');
 const MongoStore = require('connect-mongo')(session);
 var bodyParser = require('body-parser');
+const path = require('path');
+
 global.logged_in = false;
 
 
 require('dotenv').config();
+
+// Serve static assets if in production
+if(process.env.NODE_ENV === 'production') {
+    // Set static folder
+    app.use(express.static('build'))
+
+    app.get('*', (req, res) => {
+       res.sendFile(path.resolve(__dirname, 'build', 'index.html')); 
+    })
+}
+
 const port = process.env.PORT || 5000;
 
 const app = express();
