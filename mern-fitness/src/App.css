@@ -1,0 +1,158 @@
+
+
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 100vh;  
+  
+}
+
+h1, h2, h3 {
+  color: #232122;
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
+  background-color: #a5c05b;
+  border-radius: 10px;
+  padding: 0.5rem;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 450px;
+}
+h3.loggedExerTitle {
+  background-color: #a5c05b;
+	padding: 0.5rem;
+  border-radius: 6px;
+  color: #232122;
+  text-align: center;
+  max-width: none;
+}
+
+nav {
+  background-color: #232122;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+nav a {
+  color: #a5c05b;
+}
+
+nav a:hover {
+  color: #dddede;
+}
+
+.signUp-Out {
+  margin: 0px;
+  margin-left: 50px;
+  padding: 0px;
+  float: right;
+}
+.signUp-Out li {
+  margin: 0;
+  padding: 0px;
+  display: inline-block;
+  margin-left: -1.3rem;
+}
+
+.userGreeting {
+  color: #7ba4a8;
+}
+
+.congrats {
+  background-color: #7ba4a8;
+  margin-bottom: -5.7px;
+  border-radius: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.tableCustom {
+  font-family: 'Raleway', sans-serif;
+  background-color: white;
+}
+
+.tableCustom tr:nth-child(odd) {
+  background: lightgrey;
+}
+
+form {
+  background: #dddede;
+  color: #232122;
+  font-size: 1.3rem;
+  padding: 2rem;
+  font-family: 'Raleway', sans-serif;
+  border-radius: 1.2rem;
+  width: 30%;
+  min-width: 279px; 
+  margin-right: auto;
+  margin-left: auto;
+}
+form input, form select {
+  text-align: center;
+}
+
+.badSignIn{
+  color: #eb2a2a;
+}
+input.btn-primary {
+  background-color: #7ba4a6;
+  color: white;
+}
+
+form input.btn-primary:hover {
+  background-color: #a5c05b;
+  color: black;
+}
+
+.edit-Btn {
+  color: #a5c05b;
+  background-color: #232122;
+  padding: 0.4rem;
+  border-radius: 0.2rem;
+}
+
+.deleteBtn {
+  color: #f55449;
+  background-color: #232122;
+  padding: 0.4rem;
+  border-radius: 0.2rem;
+}
+
+.deleteBtn:hover, .edit-Btn:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.tips-video {
+  display: flex;
+  margin-top: 13vh;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+div.jumbotron {
+  background-color: #dddede;
+  font-size: 1.2rem;
+  padding: 20px;
+}
+
+.footerCustom {
+  margin-left: auto;
+  margin-right: auto;
+  width: 75vw;
+  margin-top: 200px;
+  height: 2.5rem;
+  background-color: #232122;
+  color: #dddede;
+  padding: 0.6rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.footer-link {
+  color: #7ba4a8;
+}
+.footer-link:hover {
+  color: #a5c05b;
+  text-decoration: none;
+}
