@@ -15,10 +15,10 @@ require('dotenv').config();
 // Serve static assets if in production
 if(process.env.NODE_ENV === 'production') {
     // Set static folder
-    app.use(express.static('build'))
+    app.use(express.static('../mern-fitness/build'))
 
     app.get('*', (req, res) => {
-       res.sendFile(path.resolve(__dirname, 'build', 'index.html')); 
+       res.sendFile(path.resolve(__dirname, 'mern-fitness', 'build', 'index.html')); 
     })
 }
 
