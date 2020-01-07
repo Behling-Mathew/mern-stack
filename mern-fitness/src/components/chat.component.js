@@ -242,7 +242,7 @@ class ChatRoom extends React.Component {
 	}
 
 	componentDidMount() {
-        axios.get('http://localhost:5000/messages/chat')
+        axios.get('/messages/chat')
           .then(response => {
               this.setState ({ messages: response.data})
           })
@@ -270,7 +270,7 @@ class ChatRoom extends React.Component {
 			this.setState({ messages: [...this.state.messages, newMessageItem] });
 			this.resetTyping(sender);
 
-			axios.post('http://localhost:5000/messages/add', messageToDatabase)
+			axios.post('/messages/add', messageToDatabase)
               .then(res => console.log(res.data));
 		
 		}, 400);
