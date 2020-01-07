@@ -27,7 +27,7 @@ export default class EditExercise extends Component {
 
     // this method is called right before the page is loaded
     componentDidMount() {
-       axios.get('http://localhost:5000/exercises/'+this.props.match.params.id)
+       axios.get('/exercises/'+this.props.match.params.id)
          .then(response => {
              this.setState({
                  username: response.data.username,
@@ -39,7 +39,7 @@ export default class EditExercise extends Component {
          .catch(function (error) {
              console.log(error);
          })
-       axios.get('http://localhost:5000/users/')
+       axios.get('/users/')
          .then(response => {
              if (response.data.length > 0) {
                  this.setState({
@@ -86,7 +86,7 @@ onSubmit(e) {
     }
 
     console.log(exercise)
-    axios.post('http://localhost:5000/exercises/update/'+this.props.match.params.id, exercise)
+    axios.post('/exercises/update/'+this.props.match.params.id, exercise)
       .then(res => console.log(res.data));
     // takes people back to excersie list page after submitted
     window.location = '/';

@@ -62,7 +62,7 @@ export default class CreateExercise extends Component {
         //const li = localStorage.getItem('isLoggedIn');
         //this.setState({token: li});
         //console.log("in did mount function, this token contains: " + li)
-       axios.get('http://localhost:5000/users/')
+       axios.get('/users/')
          .then(response => {
              if (response.data.length > 0) {
                  this.setState({
@@ -110,7 +110,7 @@ export default class CreateExercise extends Component {
         }
 
         console.log(exercise)
-        axios.post('http://localhost:5000/exercises/add', exercise)
+        axios.post('/exercises/add', exercise)
         .then(res => console.log(res.data));
         // takes people back to excersie list page after submitted
         window.location = '/';
