@@ -88,8 +88,10 @@ if (process.env.NODE_ENV === 'production') {
     // React root
 
     app.get('*', (req, res) => {
-       res.sendFile(path.join(__dirname + "../mern-fitness/build/index.html"));
-        
+        let url = path.join(__dirname, '../mern-fitness/build', 'index.html');
+        if (!url.startsWith('/app/')) // since we're on local windows
+        url = url.substring(1);
+        res.sendFile(url); 
     }); 
 }
 
