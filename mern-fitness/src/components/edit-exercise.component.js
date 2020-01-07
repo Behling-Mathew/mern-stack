@@ -89,7 +89,7 @@ onSubmit(e) {
     axios.post('/exercises/update/'+this.props.match.params.id, exercise)
       .then(res => console.log(res.data));
     // takes people back to excersie list page after submitted
-    window.location = '/';
+    window.location = '/list';
 }
 
 

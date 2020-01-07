@@ -55,7 +55,7 @@ render() {
             <div className="collapse navbar-collapse" id="navbar1">
             {localStorage.getItem('isLoggedIn') === 'true' && <ul className="navbar-nav">
                 <li className="navbar-item">
-                <Link to="/" className="nav-link">Exercises</Link>
+                <Link to="/list" className="nav-link">Exercises</Link>
                 </li>
                 <li className="navbar-item">
                 <Link to="/create" className="nav-link">Create Exercise Log</Link>

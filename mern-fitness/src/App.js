@@ -24,6 +24,7 @@ function App() {
         <Navbar />
         <br />
         <Route path="/" exact component={Tips} />
+        <Route path="/list" exact component={ExercisesList} />
         <Route path="/edit/:id" exact component={EditExercise} />
         <Route path="/create" exact component={CreateExercise} />
         <Route path="/user" exact component={CreateUser} />
