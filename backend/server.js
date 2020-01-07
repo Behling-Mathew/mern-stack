@@ -13,17 +13,6 @@ global.logged_in = false;
 require('dotenv').config();
 
 
-    // Set static folder
-    app.use(express.static(path.join(__dirname, "../mern-fitness/build")));
-
-    // React root
-
-    app.get('*', (req, res) => {
-       res.sendFile(path.join(__dirname + "../mern-fitness/build/index.html"));
-        
-    });
-
-
 const port = process.env.PORT || 5000;
 
 const app = express();
@@ -58,6 +47,17 @@ connection.once('open', () => {
     console.log("MongoDB database connection established successfully");
 })
 
+
+// To use when deploying to production
+    // Set static folder
+    app.use(express.static(path.join(__dirname, "../mern-fitness/build")));
+
+    // React root
+
+    app.get('*', (req, res) => {
+       res.sendFile(path.join(__dirname + "../mern-fitness/build/index.html"));
+        
+    }); 
 
 app.get('/test', (req, res) => {
     req.session.email = "bob@gmail.com"
