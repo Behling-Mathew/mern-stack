@@ -47,18 +47,6 @@ connection.once('open', () => {
     console.log("MongoDB database connection established successfully");
 })
 
-
-// To use when deploying to production
-    // Set static folder
-    app.use(express.static(path.join(__dirname, "../mern-fitness/build")));
-
-    // React root
-
-    app.get('*', (req, res) => {
-       res.sendFile(path.join(__dirname + "../mern-fitness/build/index.html"));
-        
-    }); 
-
 app.get('/test', (req, res) => {
     req.session.email = "bob@gmail.com"
     console.log("You are in testing1. Session email is: " + req.session.email + " Logged in is: " + logged_in);
@@ -90,9 +78,21 @@ app.use('/exercises', exercisesRouter);
 app.use('/users', usersRouter);
 
 app.use('/messages', messagesRouter);
+
+// To use when deploying to production
+
+if (process.env.NODE_ENV === 'production') {
+    // Set static folder
+    app.use(express.static(path.join(__dirname, "../mern-fitness/build")));
+
+    // React root
+
+    app.get('*', (req, res) => {
+       res.sendFile(path.join(__dirname + "../mern-fitness/build/index.html"));
+        
+    }); 
+}
     
-
-
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
